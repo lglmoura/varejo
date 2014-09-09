@@ -34,7 +34,7 @@ gem 'maskedinput-rails'
 # https://github.com/net-ssh/net-ssh/issues/145
 gem 'net-ssh', '2.7.0'
 
-gem 'spreadsheet', '~> 0.9.7'
+#gem 'spreadsheet', '~> 0.9.7'
 
 gem 'cocoon', '~> 1.2.6'
 
