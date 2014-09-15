@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @setor.nome
+
+= link_to 'Edit', edit_setor_path(@setor)
+\|
+= link_to 'Back', setors_path

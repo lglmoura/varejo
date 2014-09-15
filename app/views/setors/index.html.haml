@@ -1,0 +1,19 @@
+%h1 Listing setors
+
+%table
+  %tr
+    %th Nome
+    %th
+    %th
+    %th
+
+  - @setors.each do |setor|
+    %tr
+      %td= setor.nome
+      %td= link_to 'Show', setor
+      %td= link_to 'Edit', edit_setor_path(setor)
+      %td= link_to 'Excluir', setor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Setor', new_setor_path
