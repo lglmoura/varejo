@@ -26,7 +26,7 @@ feature 'gerenciar Setor' do
 
   end
 
-   scenario 'excluir curso' do #, :javascript => true  do
+   scenario 'excluir setor' do #, :javascript => true  do
 
        setor = FactoryGirl.create(:setor)
 

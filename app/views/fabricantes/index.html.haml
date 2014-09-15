@@ -1,0 +1,19 @@
+%h1 Listing fabricantes
+
+%table
+  %tr
+    %th Nome
+    %th
+    %th
+    %th
+
+  - @fabricantes.each do |fabricante|
+    %tr
+      %td= fabricante.nome
+      %td= link_to 'Show', fabricante
+      %td= link_to 'Edit', edit_fabricante_path(fabricante)
+      %td= link_to 'Excluir', fabricante, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Fabricante', new_fabricante_path
