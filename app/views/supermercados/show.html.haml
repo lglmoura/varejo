@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Nome:
+  = @supermercado.nome
+%p
+  %b Endereço:
+  = @supermercado.endereco
+%p
+  %b Complemento:
+  = @supermercado.complemento
+%p
+  %b Bairro:
+  = @supermercado.bairro
+%p
+  %b Cidade:
+  = @supermercado.cidade
+%p
+  %b Estado:
+  = @supermercado.estado
+%p
+  %b CEP:
+  = @supermercado.cep
+%p
+  %b Latitude:
+  = @supermercado.latitude
+%p
+  %b Longitude:
+  = @supermercado.longitude
+
+= link_to 'Edit', edit_supermercado_path(@supermercado)
+\|
+= link_to 'Back', supermercados_path

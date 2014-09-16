@@ -1,0 +1,16 @@
+= simple_form_for(@supermercado) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nome
+    = f.input :endereco , label: 'Endereço'
+    = f.input :complemento
+    = f.input :bairro
+    = f.input :cidade
+    = f.input :estado
+    = f.input :cep , label: 'CEP'
+    = f.input :latitude
+    = f.input :longitude
+
+  .form-actions
+    = f.button :submit , 'Salvar'
