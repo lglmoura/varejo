@@ -4,7 +4,7 @@ require 'rails_helper'
 
 feature 'gerenciar Supermercado' do
 
-  scenario 'incluir Supermercado' , :js => true  do
+  scenario 'incluir Supermercado' do #, :js => true  do
 
     visit new_supermercado_path
 
@@ -14,7 +14,7 @@ feature 'gerenciar Supermercado' do
 
   end
 
-  scenario 'alterar Supermercado' , :js => true  do
+  scenario 'alterar Supermercado' do#, :js => true  do
 
     supermercado = FactoryGirl.create(:supermercado)
 
@@ -26,7 +26,7 @@ feature 'gerenciar Supermercado' do
 
   end
 
-   scenario 'excluir supermercado' , :js => true do
+   scenario 'excluir supermercado' do #, :js => true do
 
        supermercado = FactoryGirl.create(:supermercado)
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :categorias
+
   resources :supermercados
 
   resources :fabricantes
