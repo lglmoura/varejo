@@ -52,6 +52,7 @@ group :development, :test do
   gem 'pry-rails', '~> 0.3.2'
   gem 'rspec-collection_matchers'
   gem 'faker'
+  gem 'selenium-webdriver'
 end
 
 group :development do
