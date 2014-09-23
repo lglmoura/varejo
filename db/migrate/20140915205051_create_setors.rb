@@ -1,6 +1,6 @@
 class CreateSetors < ActiveRecord::Migration
   def change
-    create_table :setores do |t|
+    create_table :setors do |t|
       t.string :nome
 
       t.timestamps
