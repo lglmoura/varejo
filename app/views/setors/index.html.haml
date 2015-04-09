@@ -1,19 +1,21 @@
-%h1 Listing setors
-
-%table
-  %tr
-    %th Nome
-    %th
-    %th
-    %th
-
-  - @setors.each do |setor|
+- model_class = Setor
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+%table.table.table-striped
+  %thead
     %tr
-      %td= setor.nome
-      %td= link_to 'Show', setor
-      %td= link_to 'Edit', edit_setor_path(setor)
-      %td= link_to 'Excluir', setor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:nome)
+      %th= model_class.human_attribute_name(:created_at)
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @setors.each do |setor|
+      %tr
+        %td= link_to setor.id, setor_path(setor)
+        %td= setor.nome
+        %td=l setor.created_at
+        %td
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_setor_path(setor), :class => 'btn btn-mini'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), setor_path(setor), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
 
-%br
-
-= link_to 'New Setor', new_setor_path
+= link_to t('.new', :default => t("helpers.links.new")), new_setor_path, :class => 'btn btn-primary'

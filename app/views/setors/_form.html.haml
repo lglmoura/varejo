@@ -1,13 +1,5 @@
-= form_for @setor do |f|
-  - if @setor.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@setor.errors.count, "error")} prohibited this setor from being saved:"
-      %ul
-        - @setor.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :nome
-    = f.text_field :nome
-  .actions
-    = f.submit 'Salvar'
+= simple_form_for @setor, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :nome
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), setors_path, :class => 'btn'
